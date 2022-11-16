@@ -22,8 +22,8 @@ provider "azurerm" {
 }
 
 data "azurerm_kubernetes_cluster" "k8s" {
-  name                = "${azurerm_resource_group.aks_rg.name}-cluster"
-  resource_group_name = azurerm_resource_group.aks_rg.name
+  name                = "${azurerm_resource_group.rg.name}-cluster"
+  resource_group_name = azurerm_resource_group.rg.name
 }
 
 provider "kubernetes" {
